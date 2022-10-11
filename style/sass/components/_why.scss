@@ -1,0 +1,61 @@
+.why-choose-section {
+  padding: 95px 0 115px;
+  background-color: $color_8;
+  h2 {
+    color: $color_1;
+    padding: 0 11px;
+  }
+}
+.why-choose {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.item-why {
+  @include flex-var(flex, center, center);
+  flex-direction: column;
+}
+.icon-div {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  background-color: $main_color;
+  @include flex-var(flex, center, center);
+  margin-bottom: 30px;
+}
+.name_service {
+  color: $color_1;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@include xs {
+  .why-choose-section {
+    h2 {
+      padding: 0 18px;
+    }
+  }
+  .why-choose {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 15px;
+  }
+  .icon-div {
+    max-width: 145px;
+    max-height: 145px;
+    margin-bottom: 20px;
+  }
+  .name_service {
+    font-size: 14px;
+    min-height: 42px;
+    text-align: center;
+  }
+}
+
+div.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s ease-out;
+}
+
+.accordion {
+  cursor: pointer;
+}

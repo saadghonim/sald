@@ -1,0 +1,70 @@
+.service-models-section {
+  padding-bottom: 150px;
+}
+.service-models {
+  position: relative;
+  img {
+    max-width: 100%;
+  }
+  .service_item {
+    a {
+      display: block;
+    }
+  }
+  .swiper-button-next i,
+  .swiper-button-prev i {
+    font-size: 36px;
+    transition: 0.5s;
+    color: #cccccc;
+    &:hover {
+      color: $main_color;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-rtl .swiper-button-prev {
+    right: -50px;
+  }
+
+  .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    left: -50px;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    display: none;
+  }
+
+  @include xs {
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      display: block;
+    }
+    .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: -40px;
+    }
+    .swiper-button-next i,
+    .swiper-button-prev i {
+      display: none;
+    }
+    .swiper-pagination-bullet-active {
+      background-color: $main_color;
+    }
+  }
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+@include xs {
+  .service-models-section {
+    padding-bottom: 100px;
+    overflow: hidden;
+  }
+}
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}

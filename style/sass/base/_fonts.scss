@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "noor";
+  src: url("../fonts/Noor-Light.woff2") format("woff2"),
+    url("../fonts/Noor-Light.woff") format("woff"),
+    url("../fonts/Noor-Light.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "noor";
+  src: url("../fonts/Noor-Regular.woff2") format("woff2"),
+    url("../fonts/Noor-Regular.woff") format("woff"),
+    url("../fonts/Noor-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "noor";
+  src: url("../fonts/Noor-Bold.woff2") format("woff2"),
+    url("../fonts/Noor-Bold.woff") format("woff"),
+    url("../fonts/Noor-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

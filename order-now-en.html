@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.css"
+      integrity="sha512-OtwMKauYE8gmoXusoKzA/wzQoh7WThXJcJVkA29fHP58hBF7osfY0WLCIZbwkeL9OgRCxtAfy17Pn3mndQ4PZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Baker | Order-now</title>
+  </head>
+  <body>
+    <!-- preload progress -->
+    <div class="progress_preload">
+      <div class="progress" id="progress_div">
+        <div class="bar" id="bar1"></div>
+      </div>
+      <input type="hidden" id="progress_width" value="0" />
+    </div>
+
+    <div class="moboverlay"></div>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~start header~~~~~~~~~~~~~~~~~~~~~ -->
+    <header>
+      <div class="container">
+        <div class="header">
+          <div class="logo">
+            <a href="index.html" class="anc_logo">
+              <figure>
+                <img src="images/logo.png" alt="logo" width="111" height="60" />
+              </figure>
+            </a>
+          </div>
+          <nav>
+            <button class="btn_close_nave btn_gh">
+              <i class="las la-times"></i>
+            </button>
+            <ul class="ul_nav ul_gh">
+              <li>
+                <a href="about-us-en.html" class="anc_nav anc_gh">about us</a>
+              </li>
+              <li>
+                <a href="care-en.html" class="anc_nav anc_gh">
+                  excellent care
+                </a>
+              </li>
+              <li>
+                <a href="steam-wash-en.html" class="anc_nav anc_gh"
+                  >Steam features</a
+                >
+              </li>
+              <li>
+                <a
+                  href="en.html#id-package"
+                  class="anc_nav anc_gh click_position"
+                  data-id="id-package"
+                  >Packages</a
+                >
+              </li>
+              <li>
+                <a
+                  href="en.html#id-service-models"
+                  class="anc_nav anc_gh click_position"
+                  data-id="id-service-models"
+                >
+                  Service models</a
+                >
+              </li>
+              <li>
+                <a
+                  href="en.html#id-faq"
+                  class="anc_nav anc_gh click_position"
+                  data-id="id-faq"
+                >
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="en.html#id-contact-us"
+                  class="anc_nav anc_gh click_position"
+                  data-id="id-contact-us"
+                >
+                  contact us</a
+                >
+              </li>
+              <li>
+                <a href="order-now.html" class="anc_nav anc_gh">العربية</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="div-order-now_bars">
+            <a
+              href="en.html#id-package"
+              class="anc_gh order-now effects_ click_position"
+              data-id="id-package"
+              >Order now
+            </a>
+            <button class="btn_bars btn_gh"><i class="las la-bars"></i></button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~end header~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~start breadcrumb~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div class="breadcrumb-parant">
+      <div class="container">
+        <div class="breadcrumb_">
+          <a href="en.html" class="anc_gh">home </a>
+          <span>/</span>
+          <h5 class="m_P_gh">order now</h5>
+        </div>
+      </div>
+    </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~end breadcrumb~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~strat order-finish~~~~~~~~~~~~~~~~~~~ -->
+    <section class="order-finish-parant">
+      <div class="container">
+        <div class="order-finish">
+          <h1 class="title-single">Checkout</h1>
+          <h3 class="title-alert">
+            Add the required data(
+            <span>*</span>
+            ) To complete the request
+          </h3>
+          <div class="form-finish">
+            <form>
+              <div class="group_form">
+                <label>full name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="group_form">
+                <label>mobile number</label>
+                <input type="tel:" class="form-control" />
+              </div>
+              <div class="group_form">
+                <label> email</label>
+                <input type="text" class="form-control" name="email" />
+              </div>
+              <div class="group_form">
+                <label> country</label>
+                <div class="position_r">
+                  <i class="las la-angle-down angle_select"></i>
+                  <select class="js-select-form-country-single">
+                    <option value="one">country</option>
+                    <option value="two">Riyadh</option>
+                    <option value="three">Riyadh</option>
+                  </select>
+                </div>
+              </div>
+              <div class="group_form">
+                <label>Neighborhood</label>
+                <input type="text" class="form-control" />
+              </div>
+            </form>
+          </div>
+          <div class="map-parant">
+            <label>Mark your location on the map</label>
+            <input id="loc" type="text" value="" class="input-map" />
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~end order-finish~~~~~~~~~~~~~~~~~~~~~ -->
+    <section class="Service-delivery-date">
+      <h3 class="m_P_gh title_date">Service delivery date</h3>
+      <div class="container">
+        <div class="delivery-time-content">
+          <div class="delivery-time">
+            <label class="delivery-item">
+              <input type="radio" name="delivery-time" value="immediately" />
+              <div class="delivery-item-text">
+                <div class="text">
+                  <i class="las la-calendar"></i>
+                </div>
+              </div>
+              <span> immediately</span>
+            </label>
+            <label class="delivery-item">
+              <input type="radio" name="delivery-time" class="select-date" />
+              <div class="delivery-item-text">
+                <div class="text select-date">
+                  <i class="las la-stopwatch"></i>
+                </div>
+              </div>
+              <span>Select date</span>
+            </label>
+          </div>
+        </div>
+        <div class="payment-methods-content">
+          <h3 class="m_P_gh title_date">Select payment method</h3>
+          <div class="payment-methods">
+            <label
+              class="payment-method lazy-head-img"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Cash On Delivery"
+            >
+              <input type="radio" name="payment-methods" value="01" />
+              <div class="payment-img loaded-img">
+                <img src="images/pay/pay1.png" />
+              </div>
+              <span> cash</span>
+            </label>
+            <label
+              class="payment-method lazy-head-img"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Visa &amp; MasterCard"
+            >
+              <input type="radio" name="payment-methods" value="02" />
+              <div class="payment-img loaded-img">
+                <img src="images/pay/pay2.png" />
+              </div>
+              <span>Visa - MasterCard</span>
+            </label>
+            <label
+              class="payment-method lazy-head-img"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="mada"
+            >
+              <input type="radio" name="payment-methods" value="03" />
+              <div class="payment-img loaded-img">
+                <img src="images/pay/pay3.png" />
+              </div>
+              <span> Apple Pay</span>
+            </label>
+            <label
+              class="payment-method lazy-head-img"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Sdad"
+            >
+              <input type="radio" name="payment-methods" value="04" />
+              <div class="payment-img loaded-img">
+                <img src="images/pay/pay4.png" />
+              </div>
+              <span>stc bay</span>
+            </label>
+            <label
+              class="payment-method lazy-head-img"
+              data-toggle="tooltip"
+              data-placement="top"
+              title=""
+              data-original-title="Bank transfer"
+            >
+              <input type="radio" name="payment-methods" value="05" />
+              <div class="payment-img loaded-img">
+                <img src="images/pay/pay5.png" />
+              </div>
+              <span>madaa</span>
+            </label>
+          </div>
+        </div>
+        <div class="content_finish">
+          <h3 class="m_P_gh title_finish_item">Full wash and polish package</h3>
+          <p class="m_P_gh">Car Size: Small</p>
+          <span class="price_finish">433 R.S</span>
+          <button class="btn_gh order-now effects_" data-id="id-package">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~start footer~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <footer>
+      <div class="container">
+        <p class="m_P_gh">© Baker 2022. All rights reserved</p>
+      </div>
+    </footer>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~end footer~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <button class="btn_gh back_top show"></button>
+    <!-- Start Adress Book Modal -->
+    <div class="modal fade date-modal" id="date-modal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Choose the delivery day</h5>
+            <div class="date-picker-container">
+              <input
+                type="text"
+                class="datePicker flatpickr-input"
+                readonly="readonly"
+              />
+              <span class="la la-calendar-alt"></span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <h5 class="modal-title">Select the period</h5>
+            <div class="times-list">
+              <label class="time-range">
+                <input type="radio" name="time-range" />
+                <span class="time-text"> From 08:00 AM to 11:00 AM </span>
+              </label>
+              <label class="time-range">
+                <input type="radio" name="time-range" />
+                <span class="time-text"> From 01:00 PM to 04:00 PM </span>
+              </label>
+              <label class="time-range">
+                <input type="radio" name="time-range" />
+                <span class="time-text"> From 06:00 PM to 10:00 PM </span>
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a role="button" data-dismiss="modal" class="continue-btn">
+              Continue
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Adress Book Modal -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?region=SA&language=ar&key=AIzaSyA9UeezZ2xyNjrwck8SLdh9NxsJp6HhLQc&libraries=places"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js"
+      integrity="sha512-+ruHlyki4CepPr07VklkX/KM5NXdD16K1xVwSva5VqOVbsotyCQVKEwdQ1tAeo3UkHCXfSMtKU/mZpKjYqkxZA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

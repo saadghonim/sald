@@ -1,0 +1,198 @@
+.collapse_parant {
+  display: flex;
+  background-color: #f7f7f7;
+  margin-bottom: 5px;
+  .number_c {
+    background-color: #ebebeb;
+    width: 80px;
+    padding-top: 27px;
+    min-height: 80px;
+    border-left: 2px solid $color_1;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    color: $black_color;
+
+    @include en {
+      border-right: 2px solid #e8e8e8;
+    }
+  }
+  .btn_collapse_,
+  .number_c {
+    font-weight: 700;
+    color: $black_color;
+  }
+  .group_collapse {
+    width: 100%;
+  }
+  .btn_collapse_ {
+    padding: 0 30px;
+    width: 100% !important;
+    text-align: start;
+    height: 80px;
+    background-color: $color_3;
+    font-size: 16px;
+    @include flex-var(flex, center, space-between);
+    text-transform: capitalize;
+    position: relative;
+  }
+  .toggle_collapse {
+    padding: 10px 30px 30px 80px;
+    @include en {
+      padding: 10px 80px 30px 30px;
+    }
+    text-align: justify;
+    font-size: 16px;
+    color: $color_10;
+    font-weight: 400;
+    background-color: $color_3;
+    line-height: 1.8;
+    display: none;
+  }
+}
+.icon-wrapper {
+  width: 16px;
+  height: 20px;
+  position: relative;
+}
+.bar {
+  position: absolute;
+  top: 11px;
+  height: 2px;
+  width: 16px;
+  background-color: $black_color;
+}
+.bar--horizontal {
+  transform: rotate(90deg);
+  transition: all ease 0.5s;
+}
+.bar--horizontal.is-active {
+  transform: rotate(540deg);
+}
+@keyframes minus {
+  100% {
+    transform: rotate(540deg);
+  }
+}
+@keyframes plus {
+  100% {
+    transform: rotate(540deg);
+  }
+}
+.minus {
+  animation: minus 0.5s ease;
+  animation-fill-mode: forwards;
+}
+.plus {
+  animation: plus 0.5s ease;
+  animation-fill-mode: forwards;
+}
+.poen_co {
+  color: $main_color !important;
+}
+.poen_backg {
+  background-color: $main_color !important;
+}
+@include xs {
+  .faq_section {
+    margin-bottom: 80px;
+  }
+  .faq {
+    width: 100%;
+    > h2 {
+      margin-bottom: 20px;
+    }
+  }
+  .collapse_parant {
+    .btn_collapse_ {
+      padding: 20px 20px 20px 40px;
+      font-size: 14px;
+      @include en {
+        padding: 20px 40px 20px 20px;
+      }
+    }
+
+    .toggle_collapse {
+      padding: 0px 20px 20px 40px;
+      font-size: 14px;
+    }
+    .number_c {
+      padding: 0;
+      padding-top: 20px;
+      width: 40px;
+    }
+  }
+  .icon-wrapper {
+    position: absolute;
+    top: 20px;
+    @include ar {
+      left: 10px;
+    }
+    @include en {
+      right: 10px;
+    }
+  }
+  .collapse_parant {
+    .btn_collapse_ {
+      font-size: 16px;
+    }
+  }
+  .title_main {
+    font-size: 18px;
+  }
+}
+
+.faq_section {
+  padding: 120px 0 170px;
+}
+.content_faq {
+  text-align: start;
+  width: 90%;
+  .btn_order_now {
+    text-align: start;
+    margin: inherit;
+  }
+  .effects_2 {
+    background-color: $color_8;
+    span {
+      background-color: $main_color;
+    }
+  }
+  .title_div {
+    margin-bottom: 30px;
+    h2 {
+      text-align: start;
+    }
+    text-align: start;
+  }
+  .p_content {
+    font-size: 24px;
+    color: $black_color;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+}
+@include xs {
+  .faq_section {
+    padding: 90px 0 0;
+  }
+  .content_faq {
+    width: 100%;
+    .btn_order_now {
+      margin: auto;
+      margin-bottom: 30px;
+    }
+  }
+  .content_faq {
+    .p_content {
+      text-align: center;
+    }
+    .title_div {
+      text-align: center;
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}

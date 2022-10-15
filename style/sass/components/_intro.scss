@@ -1,0 +1,83 @@
+main {
+ height: 100%;
+ background-image: url("../images/intro.png");
+ background-size: cover;
+}
+
+.services_div {
+ z-index: 11;
+ @include flex-var(flex, center, center);
+
+ .anc_service {
+  @include flex-var(flex, center, center);
+  flex-direction: column;
+
+  span {
+   font-size: 24px;
+   color: $color_1;
+   font-weight: 700;
+   display: inline-block;
+   width: 70%;
+   text-align: center;
+   height: 72px;
+  }
+
+  &:hover {
+   img {
+    transform: scale(1.1);
+   }
+
+   .div_img {
+    border-color: $color_1;
+   }
+  }
+
+  .div_img {
+   width: 263px;
+   height: 263px;
+   overflow: hidden;
+   border-radius: 50%;
+   margin: 30px;
+   transition: .5s;
+   border: 10px solid rgba(250, 250, 250, .25);
+
+   img {
+    transition: .5s;
+   }
+  }
+ }
+}
+
+.intro_section {
+ position: relative;
+ @include flex-var(flex, center, center);
+ width: 100%;
+ height: calc(100vh - 70px);
+
+ &::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  // background: rgba(42, 57, 78, .5);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(42, 57, 78, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+
+ }
+
+ // height: calc(100vh - 70px);
+ .home_page {
+  height: 100vh;
+ }
+
+
+
+ .image-intro {
+  position: absolute;
+  inset: 0;
+  max-width: 100%;
+  // height: 100vh;
+  // max-height: 100%;
+ }
+}

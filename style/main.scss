@@ -8,11 +8,7 @@
 
 //components
 @import "sass/components/contact";
-@import "sass/components/why";
-@import "sass/components/banner";
-@import "sass/components/packages";
-@import "sass/components/faq";
-@import "sass/components/service-models";
+@import "sass/components/intro";
 
 //layout
 @import "sass/layout/header";
@@ -21,6 +17,6 @@
 // pages
 
 @import "sass/pages/about-us";
-@import "sass/pages/care";
-@import "sass/pages/order-now";
-@import "sass/pages/steam-wash";
+@import "sass/pages/services";
+@import "sass/pages/gallery";
+@import "sass/pages/branches";

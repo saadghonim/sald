@@ -1,32 +1,41 @@
 body {
   font-weight: normal;
   font-style: normal;
-  @include ar {
-    font-family: "noor";
-  }
+  font-family: "SST";
+  background-color: $main_color;
+  // @include ar {
+  //   font-family: "SST";
+  // }
 }
+
 figure {
   margin: 0;
 }
+
 img {
   image-rendering: -webkit-optimize-contrast !important;
 }
+
 .ul_gh {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 .m_P_gh {
   padding: 0;
   margin: 0;
 }
+
 .anc_gh {
   display: inline-block;
   transition: 0.5s;
 }
+
 .anc_gh:hover {
   text-decoration: none;
 }
+
 .btn_gh {
   border: none;
   padding: 0;
@@ -37,11 +46,13 @@ img {
   outline: none !important;
   transition: 0.5s;
 }
+
 .d_flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .moboverlay {
   position: fixed;
   display: none;
@@ -53,6 +64,7 @@ img {
   z-index: 99;
   overflow: hidden;
 }
+
 .over_ {
   overflow-y: hidden;
 }
@@ -61,19 +73,23 @@ img {
   width: 5px;
   height: 0px;
 }
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: $main_color;
+  background: #99a7b8;
 }
+
 .title_div {
   text-align: center;
   margin-bottom: 50px;
+
   h4 {
     font-size: 16px;
     color: #666666;
     margin-bottom: 20px;
     font-weight: 400;
   }
+
   h2 {
     font-size: 30px;
     color: $black_color;
@@ -81,6 +97,7 @@ img {
     text-align: center;
   }
 }
+
 @include xs {
   .title_div {
     h2 {
@@ -88,6 +105,7 @@ img {
     }
   }
 }
+
 .effects_,
 .effects_2 {
   text-transform: capitalize;
@@ -99,6 +117,7 @@ img {
   font-size: 14px;
   font-weight: 700;
   color: $color_1;
+
   &::before {
     content: "";
     position: absolute;
@@ -123,11 +142,19 @@ img {
   &:hover {
     background-color: $color_8;
     color: $color_1;
+
     &:before {
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
     }
   }
+}
+
+.title_main {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
 }
 
 // title secondary
@@ -146,6 +173,7 @@ img {
   height: 20px;
   z-index: 9999;
   background-color: transparent;
+
   .bar {
     background: $main_color;
     width: 0%;
@@ -176,12 +204,14 @@ img {
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 88;
+
   &:hover {
     cursor: pointer;
     background-color: $color_8;
   }
+
   &::after {
-    content: "";
+    content: "";
     font-family: "line Awesome Free";
     font-weight: 900;
     font-size: 18px;
@@ -195,23 +225,30 @@ img {
   .header {
     padding: 0;
   }
+
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: $color_1;
+  background-color: $main_color;
   z-index: 50;
   transition: 0.5s;
   padding: 10px 0;
-  box-shadow: 0px 0px 5px 0px #0000001a;
-  img {
-    width: 100px;
-    height: auto;
+  box-shadow: 0px 0px 5px 0px #99a7b8;
+
+  .logo {
+    img {
+      width: 180px;
+      height: auto;
+    }
   }
+
 }
+
 .fixsedt {
   top: -130px;
 }
+
 @include xs {
   .fixed_ {
     z-index: 50;
@@ -219,26 +256,33 @@ img {
     padding: 5px 0;
   }
 }
+
 .breadcrumb-parant {
-  background-color: $main_color;
+  background-color: #334258;
   padding: 30px 0;
   margin-bottom: 80px;
 }
+
 .breadcrumb_ {
-  color: $color_1;
-  font-size: 13px;
+  font-size: 16px;
+  color: #99a7b8;
+
   @include flex-var(flex, center, flex-start);
+
   a {
-    color: $color_1;
     font-weight: 400;
     text-transform: capitalize;
+    color: #99a7b8;
+
     &:hover {
-      color: $color_8;
+      color: $color_1;
     }
   }
+
   span {
     margin: 0 10px;
   }
+
   h5 {
     font-size: 13px;
     text-transform: capitalize;
@@ -249,11 +293,77 @@ img {
 
 @include xs {
   .breadcrumb-parant {
+    display: none;
     padding: 20px 0;
     margin-bottom: 50px;
   }
+
   .breadcrumb_ {
     color: $color_1;
     font-size: 13px;
+  }
+}
+
+.custom-container {
+  padding: 0 70px;
+
+  @include xs {
+    padding: 0 15px;
+  }
+}
+
+// paginatioin style
+.pagination- {
+  margin-bottom: 10px;
+
+  .ul_pagination {
+    padding-bottom: 130px;
+
+    li {
+      &:nth-child(2) {
+        button {
+          color: #2a394e;
+          background-color: $color_1;
+        }
+      }
+    }
+
+    @include xs {
+      padding-bottom: 40px;
+    }
+
+    @include flex-var(flex, center, center);
+
+    .btn_angle {
+      font-size: 18px;
+      margin: 0 5px;
+      color: #999999;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #44546b;
+
+      &:hover {
+        color: #2a394e;
+        background-color: $color_1;
+      }
+    }
+
+    .btn_pagination {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: transparent;
+      font-size: 16px;
+      color: #a4a4a4;
+      background-color: #44546b;
+
+      &:hover {
+        color: #2a394e;
+        background-color: $color_1;
+
+      }
+    }
   }
 }

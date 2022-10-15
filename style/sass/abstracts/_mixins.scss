@@ -4,31 +4,37 @@
     @content;
   }
 }
+
 @mixin xs {
   @media only screen and (max-width: 767px) {
     @content;
   }
 }
+
 @mixin sm {
   @media only screen and (max-width: 991px) {
     @content;
   }
 }
+
 @mixin md {
   @media only screen and (max-width: 1199px) {
     @content;
   }
 }
+
 @mixin lg {
   @media only screen and (max-width: 1400px) {
     @content;
   }
 }
+
 @mixin min_xs {
   @media only screen and (min-width: 768px) {
     @content;
   }
 }
+
 @mixin min_xs {
   @media only screen and (min-width: 768px) {
     @content;
@@ -40,6 +46,7 @@
     @content;
   }
 }
+
 @mixin ar {
   html[dir="rtl"] & {
     @content;
@@ -88,6 +95,7 @@
   color: $color_1;
   font-weight: 700;
   margin-bottom: 45px;
+
   &:after {
     content: " ";
     width: 31px;
@@ -107,6 +115,7 @@
   font-weight: 700;
   margin: 0 auto 80px;
   text-align: center;
+
   &:after {
     content: " ";
     width: 31px;
@@ -122,22 +131,25 @@
 
 @mixin angle_ {
   &::after {
-    font-family: "Font Awesome 5 Free";
+    font-family: "line Awesome Free";
     content: "\f107";
     position: absolute;
     color: $color_1;
-    top: -11px;
+    top: 5px;
     font-size: 15px;
-    line-height: 3.273;
     font-weight: 900;
     transition: 0.5s;
+    font-size: 11px;
+
     @include ar {
       left: 15px;
     }
+
     @include en {
       right: 15px;
     }
   }
+
   &[aria-expanded="true"]::after {
     content: "\f106";
   }
@@ -153,6 +165,7 @@
     // font-size: 18px;
     color: $main_color;
     z-index: 9999;
+
     .owl-dot {
       width: 16px;
       height: 3px;
@@ -160,6 +173,7 @@
       opacity: 0.5;
       margin-inline-end: 5px;
     }
+
     .active {
       background-color: $main_color;
       opacity: 1;

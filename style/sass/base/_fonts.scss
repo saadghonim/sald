@@ -1,27 +1,38 @@
 @font-face {
-  font-family: "noor";
-  src: url("../fonts/Noor-Light.woff2") format("woff2"),
-    url("../fonts/Noor-Light.woff") format("woff"),
-    url("../fonts/Noor-Light.ttf") format("ttf");
+  font-family: "SST";
+  src: url("../fonts/SSTArabic-Light.woff2") format("woff2"),
+    url("../fonts/SSTArabic-Light.woff") format("woff"),
+    url("../fonts/SSTArabic-Light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "noor";
-  src: url("../fonts/Noor-Regular.woff2") format("woff2"),
-    url("../fonts/Noor-Regular.woff") format("woff"),
-    url("../fonts/Noor-Regular.ttf") format("ttf");
+  font-family: "SST";
+  src: url("../fonts/SSTArabic-Roman.woff2") format("woff2"),
+    url("../fonts/SSTArabic-Roman.woff") format("woff"),
+    url("../fonts/SSTArabic-Roman.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
-  font-family: "noor";
-  src: url("../fonts/Noor-Bold.woff2") format("woff2"),
-    url("../fonts/Noor-Bold.woff") format("woff"),
-    url("../fonts/Noor-Bold.ttf") format("ttf");
+  font-family: "SST";
+  src: url("../fonts/SSTArabic-Medium.woff2") format("woff2"),
+    url("../fonts/SSTArabic-Medium.woff") format("woff"),
+    url("../fonts/SSTArabic-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SST";
+  src: url("../fonts/SSTArabic-Bold.woff2") format("woff2"),
+    url("../fonts/SSTArabic-Bold.woff") format("woff"),
+    url("../fonts/SSTArabic-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;

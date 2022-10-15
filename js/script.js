@@ -48,45 +48,6 @@ $(document).ready(function () {
   // ~~~~~~~~~~~~~~~
 
   // swiper js
-  var swiper = new Swiper(".banner .mySwiper", {
-    slidesPerView: "auto",
-    loop: true,
-    observer: true,
-    autoplay: true,
-    observeParents: true,
-    loop: true,
-    speed: 4000,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    slidesPerView: "auto",
-    autoplay: {
-      enabled: true,
-      delay: 1,
-    },
-    navigation: {
-      nextEl: ".banner .swiper-button-next",
-      prevEl: ".banner .swiper-button-prev",
-    },
-    pagination: {
-      el: ".banner .swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      992: {
-        slidesPerView: 1,
-      },
-      1199: {
-        slidesPerView: 1,
-      },
-    },
-  });
-  // swiper js
   var swiper = new Swiper(".slider1 .mySwiper", {
     slidesPerView: "auto",
     loop: true,
@@ -150,49 +111,38 @@ $(document).ready(function () {
       },
     },
   });
-  // slider1 popup
-  if ($(".click_open_pop").length) {
-    $(".click_open_pop").click(function () {
-      $(".order_popup , .moboverlay").slideToggle("500");
-      $("body").addClass("over_");
-    });
-    $(".btn_close_order, .moboverlay").click(function () {
-      $(".order_popup , .moboverlay").fadeOut("500");
-      $("body").removeClass("over_");
-    });
-  }
 
   // ~~~~~~~~~~~~~~preload~~~~~~~~~~~~~~
-  document.onreadystatechange = function (e) {
-    if (document.readyState == "interactive") {
-      var all = document.getElementsByTagName("*");
-      for (var i = 0, max = all.length; i < max; i++) {
-        set_ele(all[i]);
-      }
-    }
-  };
-  function check_element(ele) {
-    var all = document.getElementsByTagName("*");
-    var totalele = all.length;
-    var per_inc = 100 / all.length;
+  // document.onreadystatechange = function (e) {
+  //   if (document.readyState == "interactive") {
+  //     var all = document.getElementsByTagName("*");
+  //     for (var i = 0, max = all.length; i < max; i++) {
+  //       set_ele(all[i]);
+  //     }
+  //   }
+  // };
+  // function check_element(ele) {
+  //   var all = document.getElementsByTagName("*");
+  //   var totalele = all.length;
+  //   var per_inc = 100 / all.length;
 
-    if ($(ele).on()) {
-      var prog_width =
-        per_inc + Number(document.getElementById("progress_width").value);
-      document.getElementById("progress_width").value = prog_width;
-      $("#bar1").animate({ width: prog_width + "%" }, 3, function () {
-        if (document.getElementById("bar1").style.width == "100%") {
-          $(".progress").fadeOut("slow");
-          $(".progress .bar").fadeOut("slow");
-        }
-      });
-    } else {
-      set_ele(ele);
-    }
-  }
-  function set_ele(set_element) {
-    check_element(set_element);
-  }
+  //   if ($(ele).on()) {
+  //     var prog_width =
+  //       per_inc + Number(document.getElementById("progress_width").value);
+  //     document.getElementById("progress_width").value = prog_width;
+  //     $("#bar1").animate({ width: prog_width + "%" }, 3, function () {
+  //       if (document.getElementById("bar1").style.width == "100%") {
+  //         $(".progress").fadeOut("slow");
+  //         $(".progress .bar").fadeOut("slow");
+  //       }
+  //     });
+  //   } else {
+  //     set_ele(ele);
+  //   }
+  // }
+  // function set_ele(set_element) {
+  //   check_element(set_element);
+  // }
   // ~~~~~~~~~~~~~~~~~~~~~
 
   // ~~~~~~~~~~~~back_top
@@ -230,72 +180,61 @@ $(document).ready(function () {
     document.documentElement.style.setProperty("--animate-duration", ".5s");
   // ~~~~~~~~~~~~~~~
 
-  // fancybox
+  fancybox
   Fancybox.bind("[data-fancybox]", {
-    // Your options go here
+    
   });
 
-  $(".click_position").on("click", function (e) {
-    // e.preventDefault();
-    nav_bar.classList.remove("open_nav");
 
-    $("html, body").animate(
+
+  /*~~~~~~~~~~~~~~~~~start counter~~~~~~~~~~~~~ */
+  $(".counter").each(function () {
+    var $this = $(this),
+      countTo = $this.attr("data-count");
+    $({ countNum: $this.text() }).animate(
       {
-        scrollTop: $("#" + $(this).data("id")).offset().top - 0,
+        countNum: countTo,
       },
-      1000
-    );
-  });
-  // google map
-  $(document).ready(function () {
-    initMap();
-  });
-
-  function initMap() {
-    const myLatLng = {
-      lat: 24.774255,
-      lng: 46.737586534,
-    };
-    let map = new google.maps.Map(document.getElementById("map"), {
-      center: myLatLng,
-      zoom: 17,
-    });
-    let marker = new google.maps.Marker({
-      position: map.getCenter(),
-      draggable: true,
-      map,
-      icon: "images/pin.png",
-    });
-
-    google.maps.event.addListener(marker, "dragend", function (e) {
-      updateInput(e.latLng);
-    });
-  }
-
-  function updateInput(latLng) {
-    var geocoder = new google.maps.Geocoder();
-    geocoder.geocode(
       {
-        latLng: latLng,
-      },
-      function (results) {
-        console.log(results[0]);
-        document.getElementById("loc").value = results[0].formatted_address;
+        duration: 3000,
+        easing: "linear",
+        step: function () {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function () {
+          $this.text(this.countNum);
+        },
       }
     );
-  }
+  });
+  /*~~~~~~~~~~~~~~~~~end counter~~~~~~~~~~~~~ */
 
-  if ($(".datePicker").length) {
-    $(".datePicker").flatpickr({
-      locale: document.dir == "rtl" ? "ar" : "en",
-      minDate: "today",
-      dateFormat: "d M Y",
-      defaultDate: "today",
-    });
-    $(".select-date").on("click", function () {
-      if ($("input.select-date").is(":checked")) {
-        $("#date-modal").modal("show");
-      }
-    });
-  }
+    if ($(document).width() < 768) {
+      $(".swiper-slide").unwrap();
+      
+  // swiper js
+  var swiper = new Swiper(".ser-products-parant .mySwiper", {
+    slidesPerView: "1",
+    loop: true,
+    observer: true,
+    autoplay: true,
+    observeParents: true,
+    
+    loop: true,
+    speed: 4000,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    // slidesPerView: "auto",
+    autoplay: {
+      enabled: true,
+      delay: 1,
+    },
+
+  });
+    }
+        if ($(document).width() > 768){
+        $(".ser-products-parant .swiper-wrapper").unwrap();
+
+        }
+
 });

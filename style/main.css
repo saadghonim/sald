@@ -143,6 +143,7 @@ img {
 .title_main {
   font-size: 30px;
   color: #ffffff;
+  text-transform: capitalize;
   font-weight: 700;
   text-align: center;
 }
@@ -157,14 +158,14 @@ img {
 .progress {
   position: fixed;
   left: 0px;
-  top: -12px;
+  top: 0px;
   width: 100%;
   height: 20px;
   z-index: 9999;
   background-color: transparent;
 }
 .progress .bar {
-  background: #2a394e;
+  background: #99a7b8;
   width: 0%;
   height: 5px;
 }
@@ -194,7 +195,10 @@ img {
 }
 .back_top:hover {
   cursor: pointer;
-  background-color: #04b7bb;
+  background-color: #ffffff;
+}
+.back_top:hover::after {
+  color: #2a394e;
 }
 .back_top::after {
   content: "\f106";
@@ -249,6 +253,7 @@ img {
 }
 .breadcrumb_ a {
   font-weight: 400;
+  font-size: 16px;
   text-transform: capitalize;
   color: #99a7b8;
 }
@@ -259,7 +264,7 @@ img {
   margin: 0 10px;
 }
 .breadcrumb_ h5 {
-  font-size: 13px;
+  font-size: 16px;
   text-transform: capitalize;
   font-weight: 400;
 }
@@ -363,11 +368,23 @@ img {
   grid-template-columns: repeat(2, 1fr);
   gap: 120px;
 }
+@media only screen and (max-width: 767px) {
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
 .contact .div_btn_ {
   display: flex;
   justify-content: flex-end;
   max-width: 456px;
   width: 100%;
+}
+@media only screen and (max-width: 767px) {
+  .contact .div_btn_ {
+    justify-content: flex-start;
+  }
 }
 .contact .btn_career_send {
   margin: 0;
@@ -383,6 +400,11 @@ img {
   padding: 20px;
   font-size: 16px;
   color: #999999;
+}
+@media only screen and (max-width: 767px) {
+  .contact .form_group textarea {
+    width: 100%;
+  }
 }
 .contact .form_group textarea:focus {
   outline: 0;
@@ -422,12 +444,17 @@ img {
   .careers-section,
 .contact_seciton {
     padding-top: 40px;
+    margin-bottom: 70px;
   }
 }
 .careers-section .title_main,
 .contact_seciton .title_main {
   margin-bottom: 50px;
   text-align: start;
+}
+
+.careers-section .title_main {
+  text-align: center;
 }
 
 .careers {
@@ -568,6 +595,8 @@ main {
   margin: 30px;
   transition: 0.5s;
   border: 10px solid rgba(250, 250, 250, 0.25);
+  display: flex;
+  justify-content: center;
 }
 .services_div .anc_service .div_img img {
   transition: 0.5s;
@@ -599,6 +628,28 @@ main {
   max-width: 100%;
 }
 
+@media only screen and (max-width: 767px) {
+  .intro_section {
+    min-height: 100vh;
+    height: auto;
+    padding-top: 130px;
+  }
+  .services_div {
+    flex-direction: column;
+  }
+  .services_div .anc_service {
+    margin-bottom: 15px;
+  }
+  .services_div .anc_service .div_img {
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+  }
+  .services_div .anc_service span {
+    font-size: 22px;
+    height: 66px;
+  }
+}
 .home_page header {
   transition: 0.5s;
   position: absolute;
@@ -740,23 +791,49 @@ nav .ul_nav > li .anc_lang img {
     inset-inline-start: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(153, 167, 184, 0.95);
+    overflow-y: auto;
+    background-color: rgba(153, 167, 184, 0.98);
     padding-top: 0;
     transition: 0.5s;
   }
   nav .ul_nav {
     flex-direction: column;
-    padding-top: 100px;
+    align-items: flex-start;
+    padding: 100px 20px;
   }
   nav .ul_nav li {
     margin-bottom: 15px;
+    width: 100%;
   }
   nav .ul_nav li .anc_lang {
     -webkit-margin-start: 0;
             margin-inline-start: 0;
+    position: absolute;
+    top: 30px;
+    inset-inline-start: 20px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   nav .ul_nav li a {
-    font-size: 16px;
+    width: 100%;
+    text-align: start;
+  }
+  .hover_menu::after {
+    top: 15px;
+    font-size: 12px;
+  }
+  .hover_menu .ul_menu {
+    width: auto;
+    border-radius: inherit;
+    background-color: rgba(153, 167, 184, 0.8);
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    text-align: center;
+    display: none;
+    padding: 15px 10px 0;
   }
 }
 .open_nav {
@@ -770,7 +847,7 @@ nav .ul_nav > li .anc_lang img {
     width: 100%;
   }
   nav .ul_nav > li > a {
-    padding: 0 10px;
+    padding: 0px;
   }
   nav .ul_nav > li > a:hover {
     color: #2a394e;
@@ -807,6 +884,8 @@ nav .ul_nav > li .anc_lang img {
 footer {
   padding: 60px 0 0px;
   background-color: #334258;
+  position: relative;
+  overflow: hidden;
 }
 footer .social_media {
   text-align: start;
@@ -1041,6 +1120,10 @@ html[dir=ltr] footer .newslatter .input_div .btn_newsla {
   color: #99a7b8;
 }
 
+.phone a {
+  direction: ltr;
+}
+
 @media only screen and (max-width: 1400px) {
   .anc_contact {
     font-size: 26px;
@@ -1124,6 +1207,20 @@ html[dir=ltr] footer .newslatter .input_div .btn_newsla {
   }
 }
 
+.shape-footer {
+  position: absolute;
+  inset-inline-end: -300px;
+  top: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+@media only screen and (max-width: 767px) {
+  .shape-footer {
+    display: none;
+  }
+}
+
 .single-about-us {
   margin-bottom: 80px;
 }
@@ -1138,9 +1235,9 @@ html[dir=ltr] footer .newslatter .input_div .btn_newsla {
 }
 .about-title h3 {
   font-size: 36px;
-  text-transform: uppercase;
   color: #ffffff;
   font-weight: 700;
+  text-transform: capitalize;
   text-align: start;
   margin-bottom: 20px;
 }
@@ -1298,6 +1395,7 @@ html[dir=ltr] .stat_div h3 {
 .content_item h4 {
   font-size: 24px;
   color: #ffffff;
+  text-transform: capitalize;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -1378,6 +1476,14 @@ html[dir=ltr] .stat_div h3 {
   gap: 30px;
   margin-bottom: 50px;
 }
+@media only screen and (max-width: 767px) {
+  .clients {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding-top: 40px;
+  }
+}
 .clients .item-client {
   width: 166px;
   height: 166px;
@@ -1385,6 +1491,11 @@ html[dir=ltr] .stat_div h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 767px) {
+  .clients .item-client {
+    width: auto;
+  }
 }
 .clients .item-client img {
   max-width: 100%;
@@ -1475,6 +1586,7 @@ html[dir=ltr] .stat_div h3 {
   width: 100%;
 }
 .anc_products img {
+  max-width: 100%;
   transition: 0.5s;
 }
 
@@ -1618,6 +1730,14 @@ html[dir=ltr] .stat_div h3 {
   margin: auto;
 }
 
+@media only screen and (max-width: 767px) {
+  .single-projects-section {
+    padding-top: 40px;
+  }
+  .single-projects-section .title_main {
+    margin-bottom: 30px;
+  }
+}
 .projects_section {
   padding-top: 120px;
   text-align: center;
@@ -1644,6 +1764,7 @@ html[dir=ltr] .stat_div h3 {
 }
 .gallery_img img {
   transition: 0.5s;
+  max-width: 100%;
 }
 
 .gall_hover {
@@ -1811,8 +1932,8 @@ html[dir=ltr] .stat_div h3 {
   font-size: 16px;
   font-weight: 700;
   display: flex;
-  line-height: 2.9;
   justify-content: center;
+  align-items: center;
   color: #ffffff;
   border-radius: 22.5px;
   border: 1px solid transparent;

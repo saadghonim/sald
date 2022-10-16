@@ -95,7 +95,7 @@
  }
 
  img {
-
+  max-width: 100%;
   transition: .5s;
  }
 }
@@ -267,5 +267,15 @@
   text-align: justify;
   margin: auto;
 
+ }
+}
+
+@include xs {
+ .single-projects-section {
+  padding-top: 40px;
+
+  .title_main {
+   margin-bottom: 30px;
+  }
  }
 }

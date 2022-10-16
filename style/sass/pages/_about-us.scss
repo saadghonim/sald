@@ -13,9 +13,9 @@
 
   h3 {
     font-size: 36px;
-    text-transform: uppercase;
     color: $color_1;
     font-weight: 700;
+    text-transform: capitalize;
     text-align: start;
     margin-bottom: 20px;
   }
@@ -183,6 +183,7 @@
   h4 {
     font-size: 24px;
     color: #ffffff;
+    text-transform: capitalize;
     font-weight: 700;
     margin-bottom: 20px;
   }
@@ -280,11 +281,20 @@
   @include grid-var(grid, repeat(6, 1fr), 30px);
   margin-bottom: 50px;
 
+  @include xs {
+    @include grid-var(grid, repeat(2, 1fr), 15px);
+    padding-top: 40px;
+  }
+
   .item-client {
     width: 166px;
     height: 166px;
     background-color: #ffffff;
     @include flex-var(flex, center, center);
+
+    @include xs {
+      width: auto;
+    }
 
     img {
       max-width: 100%;

@@ -1,6 +1,8 @@
 footer {
  padding: 60px 0 0px;
  background-color: $color_2;
+ position: relative;
+ overflow: hidden;
 
  .social_media {
   text-align: start;
@@ -115,6 +117,7 @@ footer {
 
 .footer {
  margin-bottom: 60px;
+
 }
 
 @include sm {
@@ -258,6 +261,12 @@ footer {
  }
 }
 
+.phone {
+ a {
+  direction: ltr;
+ }
+}
+
 @include lg {
  .anc_contact {
   font-size: 26px;
@@ -360,5 +369,18 @@ footer {
   p.copyright {
    margin-bottom: 10px;
   }
+ }
+}
+
+.shape-footer {
+ position: absolute;
+ inset-inline-end: -300px;
+ top: 0px;
+ top: 50%;
+ transform: translateY(-50%);
+ z-index: 0;
+
+ @include xs {
+  display: none;
  }
 }

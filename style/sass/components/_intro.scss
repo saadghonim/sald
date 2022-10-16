@@ -40,6 +40,8 @@ main {
    margin: 30px;
    transition: .5s;
    border: 10px solid rgba(250, 250, 250, .25);
+   display: flex;
+   justify-content: center;
 
    img {
     transition: .5s;
@@ -80,4 +82,33 @@ main {
   // height: 100vh;
   // max-height: 100%;
  }
+}
+
+@include xs {
+ .intro_section {
+  min-height: 100vh;
+  height: auto;
+  padding-top: 130px;
+
+ }
+
+ .services_div {
+  flex-direction: column;
+
+  .anc_service {
+   margin-bottom: 15px;
+
+   .div_img {
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+   }
+
+   span {
+    font-size: 22px;
+    height: 66px;
+   }
+  }
+ }
+
 }

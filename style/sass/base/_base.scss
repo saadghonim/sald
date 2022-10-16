@@ -153,6 +153,7 @@ img {
 .title_main {
   font-size: 30px;
   color: #ffffff;
+  text-transform: capitalize;
   font-weight: 700;
   text-align: center;
 }
@@ -168,14 +169,14 @@ img {
 .progress {
   position: fixed;
   left: 0px;
-  top: -12px;
+  top: 0px;
   width: 100%;
   height: 20px;
   z-index: 9999;
   background-color: transparent;
 
   .bar {
-    background: $main_color;
+    background: #99a7b8;
     width: 0%;
     height: 5px;
   }
@@ -207,7 +208,11 @@ img {
 
   &:hover {
     cursor: pointer;
-    background-color: $color_8;
+    background-color: $color_1;
+
+    &::after {
+      color: $main_color;
+    }
   }
 
   &::after {
@@ -271,6 +276,7 @@ img {
 
   a {
     font-weight: 400;
+    font-size: 16px;
     text-transform: capitalize;
     color: #99a7b8;
 
@@ -284,9 +290,8 @@ img {
   }
 
   h5 {
-    font-size: 13px;
+    font-size: 16px;
     text-transform: capitalize;
-
     font-weight: 400;
   }
 }

@@ -742,6 +742,7 @@ nav .ul_nav > li .anc_lang img {
   visibility: hidden;
   opacity: 0;
   z-index: -1;
+  transition: 0.5s;
 }
 .hover_menu .ul_menu li {
   padding: 5px 0;

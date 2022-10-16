@@ -110,6 +110,7 @@ nav {
     visibility: hidden;
     opacity: 0;
     z-index: -1;
+    transition: .5s;
 
     li {
       padding: 5px 0;

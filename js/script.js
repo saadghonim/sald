@@ -16,11 +16,15 @@ $(document).ready(function () {
     nav_bar.classList.remove("open_nav");
     body_.classList.remove("over_");
   });
+
   // open menu mobile
-  $(".hover_menu").click(function (e) {
-    e.preventDefault;
-    $(this).children().next().slideToggle("500");
-  });
+  if ($(document).width() < 768) {
+    $(".hover_menu").click(function (e) {
+      e.preventDefault;
+      $(this).children().next().slideToggle("500");
+    });
+  }
+
   // select2
   if (
     $(

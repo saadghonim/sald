@@ -286,13 +286,6 @@ footer {
   }
  }
 
- .newslatter {
-
-  .f_btn,
-  p {
-   text-align: center;
-  }
- }
 
  footer {
   .f_btn {
@@ -307,6 +300,14 @@ footer {
      margin: 0;
      margin-inline-end: 5px;
     }
+   }
+  }
+
+  .newslatter {
+
+   .f_btn,
+   p {
+    text-align: center;
    }
   }
  }

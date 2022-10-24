@@ -1140,10 +1140,6 @@ html[dir=ltr] footer .newslatter .input_div .btn_newsla {
   .social_media .ul_social {
     justify-content: center;
   }
-  .newslatter .f_btn,
-.newslatter p {
-    text-align: center;
-  }
   footer .f_btn {
     font-size: 16px;
   }
@@ -1154,6 +1150,10 @@ html[dir=ltr] footer .newslatter .input_div .btn_newsla {
     margin: 0;
     -webkit-margin-end: 5px;
             margin-inline-end: 5px;
+  }
+  footer .newslatter .f_btn,
+footer .newslatter p {
+    text-align: center;
   }
   .contact_info {
     padding-bottom: 50px;
